@@ -1,10 +1,5 @@
 package lab8mdd;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.Scanner;
-
 /**
  * @author Matt Seipel
  */
@@ -21,18 +16,39 @@ public class Acrostics
 		createGameBoard();
 		Jarvis.createDictionary();
 	}
-	
-	/**
-	 * Default 
-	 */
-	public Acrostics(){
-		super();
-	}
 			
+	/**
+	 * Creates and prints the game board
+	 */
 	private void createGameBoard(){
 		for(int i=1; i<wordIn.length()+1; i++){
 			System.out.println(wordIn.charAt(i-1) + "-----" 
 				+ wordIn.charAt(wordIn.length()-i));
 		}
 	}
+	
+	/**
+	 * Split string of Player 1's words into an array for processing.
+	 * @param userWords
+	 * @return 
+	 */
+	private String[] splitWords(String userWords){
+		String[] words = userWords.split(" ");
+		return words;
+	}
+	
+	private int scoreWords(String[] words){
+		int score = 0;
+		
+		for(int i=0; i<words.length; i++){
+			if(!Jarvis.dictionary.contains(words[i])){
+				System.out.println(words[i] + "is not a valid word.");
+			}
+			else{
+				
+			}
+		}
+	}
+	
+	
 }
