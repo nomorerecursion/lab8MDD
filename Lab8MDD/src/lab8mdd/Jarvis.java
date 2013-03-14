@@ -10,7 +10,8 @@ import java.util.Scanner;
  */
 public class Jarvis 
 {
-	public static ArrayList<String> dictionary= new ArrayList<>();
+	//Static variable to allow use across classes.
+	public static ArrayList<String> dictionary = new ArrayList<>();
 	
 	/**
 	 * Reads in the dictionary and creates it in a static variable 
