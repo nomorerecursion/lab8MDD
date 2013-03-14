@@ -14,7 +14,9 @@ public class Beheadments
 	ArrayList<String> dictionary = new ArrayList<String>();
 	ArrayList<String> player1Array = new ArrayList<String>();
 	
-	
+	/*
+	 * stores player1's answers and adds up there points
+	 */
 	public void player1(){
 		Scanner input = new Scanner(System.in);
 		String player1;
@@ -26,9 +28,13 @@ public class Beheadments
 			player1Array.add(temp[i]);
 		}
 		
-		for(int i = 0; i < player1Array.size(); i++){
-			System.out.print(player1Array.get(i) + " ");
-		}
+		
+		/*
+		 * for loop to print out there results
+		 */
+//		for(int i = 0; i < player1Array.size(); i++){
+//			System.out.print(player1Array.get(i) + " ");
+//		}
 	}
 	
 	
