@@ -37,18 +37,18 @@ public class Acrostics
 		return words;
 	}
 	
-	private int scoreWords(String[] words){
-		int score = 0;
-		
-		for(int i=0; i<words.length; i++){
-			if(!Jarvis.dictionary.contains(words[i])){
-				System.out.println(words[i] + "is not a valid word.");
-			}
-			else{
-				
-			}
-		}
-	}
+//	private int scoreWords(String[] words){
+//		int score = 0;
+//		
+//		for(int i=0; i<words.length; i++){
+//			if(!Jarvis.dictionary.contains(words[i])){
+//				System.out.println(words[i] + "is not a valid word.");
+//			}
+//			else{
+//				
+//			}
+//		}
+//	}
 	
-	
+
 }
