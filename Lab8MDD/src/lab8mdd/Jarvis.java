@@ -34,10 +34,14 @@ public class Jarvis {
     public void beheadmentGame() {
         
         //adds all the words of the dictionary substring(1)
-        for (int i = 0; i < 1979; i++) {
+        for (int i = 0; i < dictionary.size(); i++) {
 
+//			  if(dictionary.get(i).length()<=1){
+//				  String temp = dictionary.get(i);
+//				  System.out.println(temp);
+//			  }
             beheadmentDictionary.add((i), dictionary.get(i).substring(1));
-            //System.out.println(beheadmentDictionary.get(i));
+            System.out.println(beheadmentDictionary.get(i));
 
         }
         
