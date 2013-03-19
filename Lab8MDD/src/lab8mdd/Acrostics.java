@@ -16,7 +16,8 @@ public class Acrostics
 		Jarvis.createDictionary();
 		createGameBoard(wordForBoard());
 		wordsEntered = getInput();
-		System.out.println(scoreWords(splitWords(wordsEntered)));
+		System.out.println("Player 1 score: " 
+                        + scoreWords(splitWords(wordsEntered)));
 	}
 	
 	/**
@@ -25,7 +26,7 @@ public class Acrostics
 	 */
 	private String wordForBoard(){
 		System.out.print("Please enter a word to generate acrostics: ");
-		wordIn = playerInput.next();
+		wordIn = playerInput.nextLine();
 		wordIn = wordIn.toUpperCase();
 		return wordIn;
 	}
@@ -75,7 +76,8 @@ public class Acrostics
 		for(int i=0; i<words.length; i++){
 			//Validate the words
 			if(!Jarvis.dictionary.contains(words[i])){
-				System.out.println(words[i] + "is not a valid word.");
+				System.out.println("   '" + words[i] + "'" 
+                                        + " is not a valid word.");
 			}
 			else{
 				//Score valid words.
