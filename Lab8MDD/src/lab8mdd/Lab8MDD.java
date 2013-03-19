@@ -13,7 +13,7 @@ public class Lab8MDD
 
 
 		playBehadments();
-
+//		playAcrostics();
 
 	}
 	/*
@@ -25,8 +25,13 @@ public class Lab8MDD
 		Beheadments beheadmentsPlayer1 = new Beheadments();
 		beheadmentsPlayer1.processDictionary("dictionary.txt");
 		Jarvis jarvis = new Jarvis();
-		jarvis.createDictionary();
+		Jarvis.createDictionary();
 		beheadmentsPlayer1.player1();
 		jarvis.beheadmentGame();
+	}
+
+	public static void playAcrostics() throws FileNotFoundException{
+		Acrostics game = new Acrostics();
+		game.playAcrostrics();
 	}
 }
