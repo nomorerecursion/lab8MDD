@@ -15,7 +15,8 @@ public class Acrostics
 	public void playAcrostrics(){
 		Jarvis.createDictionary();
 		createGameBoard(wordForBoard());
-		splitWords(getInput());
+		wordsEntered = getInput();
+		System.out.println(scoreWords(splitWords(wordsEntered)));
 	}
 	
 	/**

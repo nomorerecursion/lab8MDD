@@ -12,8 +12,8 @@ public class Lab8MDD
 	{
 
 
-		playBehadments();
-//		playAcrostics();
+//		playBehadments();
+		playAcrostics();
 
 	}
 	/*
