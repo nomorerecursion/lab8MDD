@@ -75,7 +75,7 @@ public class Countdown {
             
 
             
-            combinations(help,3);
+            combinations(help,5);
             //checks to see if any words in countDownWords are in the dictionary and if so adds them to possibleWords
             for(int i = 0; i < countDownWords.size(); i++){
                     
@@ -83,7 +83,7 @@ public class Countdown {
                         if(dictionary.get(n).equals(countDownWords.get(i))){
                         
                         possibleWords.add(countDownWords.get(i));
-								finalWords.add(countDownWords.get(i));
+			//finalWords.add(countDownWords.get(i));
                         
                     }
                     }
@@ -101,19 +101,24 @@ public class Countdown {
                 for(int j = 0; j < possibleWords.get(i).length(); j++){
                 
                 for(int n = j+1; n < possibleWords.get(i).length(); n++){
-                    
-                    if(possibleWords.get(i).charAt(j)==(possibleWords.get(i).charAt(n))){
-                       counter++; 
+                    if(possibleWords.get(i).charAt(j)==(possibleWords.get(i).charAt(n)))
+                           break;
+                       
+                    if(possibleWords.get(i).charAt(j)!=(possibleWords.get(i).charAt(n))){
+                       counter++;
+                       
+                       if(counter == 10){
+//			   
+                       finalWords.add(possibleWords.get(i));
+                       break;
 
                     }
-						  if(counter > 0 && n == possibleWords.get(i).length()){
-								  finalWords.remove(i);
-							  }
+
                     }
                 }
                 
             }
-            
+            }
             for(int i = 0; i < finalWords.size(); i++){
                 System.out.println(finalWords.get(i));
             }
