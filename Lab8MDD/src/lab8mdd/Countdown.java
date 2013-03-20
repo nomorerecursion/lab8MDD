@@ -29,23 +29,18 @@ public class Countdown {
             ArrayList<String> finalWords = new ArrayList<String>();
             String help;
     
-    
-    
 
-    
-    
-    
-    
-    
+       /*
+        * starts the game Countdown
+        */
        public void player1(){
             Scanner input = new Scanner(System.in);
 	    String player1;
-            
             int count = 0;
                  
             
             System.out.print("Letters: ");
-            
+            //adds 9 random characters from alphabet to randomChar
             for(int i = 0; i < 9; i++){
             int randomInt = randomGenerator.nextInt(10);
             randomChar[i] = alphabet.get(randomInt);
@@ -57,7 +52,7 @@ public class Countdown {
                 System.out.print(randomChar[i] + "-");
             }
             System.out.println();
-            System.out.println("Please enter the letters without the dash's");
+            System.out.println("Please enter the letters without the dash's and no spaces");
             help = input.nextLine();
             System.out.println("You have 30 seconds to enter the longest possible word you can think of comprised of those letters. ");
             player1 = input.nextLine();
@@ -89,11 +84,11 @@ public class Countdown {
                     }
                 }
             
-            for(int i = 0; i < possibleWords.size(); i++){
-                System.out.println(possibleWords.get(i));
-            }
-            System.out.println();
-            System.out.println();
+//            for(int i = 0; i < possibleWords.size(); i++){
+//                System.out.println(possibleWords.get(i));
+//            }
+//            System.out.println();
+//            System.out.println();
             
             //checks to see if any characters are repeated and if they are they are removed from possibleWords
             for(int i = 0; i < possibleWords.size(); i++){
@@ -119,9 +114,22 @@ public class Countdown {
                 
             }
             }
-            for(int i = 0; i < finalWords.size(); i++){
-                System.out.println(finalWords.get(i));
-            }
+            
+                System.out.println("Player 2: " + finalWords.get(0));
+                System.out.print("Player");
+                
+                if(finalWords.get(0).length() == player1.length()){
+                    System.out.print(" 1 and Player 2 tied");
+                }
+                else if(finalWords.get(0).length() > player1.length()){
+                    System.out.print(" 2 wins");
+                }
+                else if(player1.length() > finalWords.get(0).length()){
+                    System.out.print(" 1 wins");
+                }
+                System.out.println();
+                
+            
             
             
             

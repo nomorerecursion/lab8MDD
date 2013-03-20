@@ -1977,7 +1977,6 @@ annually
 annuals
 annuities
 annuity
-
 annul
 annular
 annuli
@@ -10020,7 +10019,6 @@ configurations
 configure
 configured
 configures
-
 configuring
 confine
 confined
@@ -12298,7 +12296,6 @@ dancing
 dandelion
 dandelions
 dandies
-
 dandruff
 dandy
 dane
@@ -18395,7 +18392,6 @@ extenuate
 extenuated
 extenuating
 extenuation
-
 exterior
 exteriors
 exterminate
@@ -18787,7 +18783,6 @@ far
 farad
 faraday
 faraway
-
 farce
 farces
 farcical
@@ -21338,7 +21333,6 @@ gashed
 gashes
 gashing
 gasholder
-
 gasify
 gasket
 gaskets
@@ -26443,7 +26437,6 @@ inhomogeneous
 inhospitable
 inhouse
 inhuman
-
 inhumane
 inhumanely
 inhumanities
@@ -33249,7 +33242,6 @@ myth
 mythic
 mythical
 mythological
-
 mythologies
 mythologised
 mythology
@@ -34460,7 +34452,6 @@ oesophagus
 oestrogen
 oestrogens
 oestrus
-
 oeuvre
 oeuvres
 of
@@ -40237,7 +40228,6 @@ quartet
 quartets
 quartic
 quartics
-
 quartile
 quartiles
 quarto
@@ -42153,7 +42143,6 @@ remanded
 remands
 remap
 remaps
-
 remark
 remarkable
 remarkably
@@ -51102,7 +51091,6 @@ tea
 teabag
 teabags
 teach
-
 teachable
 teacher
 teachers

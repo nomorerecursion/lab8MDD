@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Random;
 
 /**
  * @author s508609
@@ -33,7 +34,8 @@ public class Jarvis {
     }
 
     public void beheadmentGame() {
-
+        Random randomGenerator = new Random();
+        int randomInt = randomGenerator.nextInt(5);
         //adds all the words of the dictionary substring(1)
         for (int i = 0; i < dictionary.size(); i++) {
 
@@ -42,12 +44,12 @@ public class Jarvis {
 //				  System.out.println(temp);
 //			  }
             beheadmentDictionary.add((i), dictionary.get(i).substring(1));
-            System.out.println(beheadmentDictionary.get(i));
+            //System.out.println(beheadmentDictionary.get(i));
 
         }
 
 
-        for (int i = 0; i < beheadmentDictionary.size(); i++) {
+        for (int i = 0; i < beheadmentDictionary.size()/randomInt; i++) {
 
             for (int n = 0; n < dictionary.size(); n++) {
                 if (dictionary.get(n).equals(beheadmentDictionary.get(i))) {
