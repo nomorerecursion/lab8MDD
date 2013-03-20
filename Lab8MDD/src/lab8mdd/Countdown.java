@@ -83,6 +83,7 @@ public class Countdown {
                         if(dictionary.get(n).equals(countDownWords.get(i))){
                         
                         possibleWords.add(countDownWords.get(i));
+								finalWords.add(countDownWords.get(i));
                         
                     }
                     }
@@ -96,23 +97,25 @@ public class Countdown {
             
             //checks to see if any characters are repeated and if they are they are removed from possibleWords
             for(int i = 0; i < possibleWords.size(); i++){
+                int counter = 0;
+                for(int j = 0; j < possibleWords.get(i).length(); j++){
                 
-                for(int j = 0; j < possibleWords.size(); j++){
-                
-                for(int n = j+1; n < possibleWords.size()-1; n++){
+                for(int n = j+1; n < possibleWords.get(i).length(); n++){
                     
                     if(possibleWords.get(i).charAt(j)==(possibleWords.get(i).charAt(n))){
-                        possibleWords.remove(i);
-                        
-                        break;
+                       counter++; 
+
                     }
+						  if(counter > 0 && n == possibleWords.get(i).length()){
+								  finalWords.remove(i);
+							  }
                     }
                 }
                 
             }
             
-            for(int i = 0; i < possibleWords.size(); i++){
-                System.out.println(possibleWords.get(i));
+            for(int i = 0; i < finalWords.size(); i++){
+                System.out.println(finalWords.get(i));
             }
             
             
