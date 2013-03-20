@@ -13,7 +13,8 @@ public class Lab8MDD
 
 
 //		playBehadments();
-		playAcrostics();
+//		playAcrostics();
+//              playGhosts();
 
 	}
 	/*
@@ -34,4 +35,9 @@ public class Lab8MDD
 		Acrostics game = new Acrostics();
 		game.playAcrostrics();
 	}
+        
+        public static void playGhosts(){
+            Ghosts game = new Ghosts();
+            game.playGhosts();
+        }
 }
