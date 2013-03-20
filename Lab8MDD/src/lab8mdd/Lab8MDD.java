@@ -1,6 +1,7 @@
 package lab8mdd;
 
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 
 /**
  * @author S401544
@@ -15,7 +16,9 @@ public class Lab8MDD
 //		playBehadments();
 //		playAcrostics();
 //              playGhosts();
-
+                playCountdown();
+            
+               
 	}
 	/*
 	 * runs the Behadments game
@@ -39,5 +42,12 @@ public class Lab8MDD
         public static void playGhosts(){
             Ghosts game = new Ghosts();
             game.playGhosts();
+        }
+        
+        
+        public static void playCountdown()throws FileNotFoundException {
+               Countdown countdownPlayer1 = new Countdown();
+               countdownPlayer1.processDictionary("dictionary.txt");
+               countdownPlayer1.player1();
         }
 }

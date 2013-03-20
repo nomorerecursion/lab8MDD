@@ -13,6 +13,7 @@ public class Jarvis {
 
     public static ArrayList<String> dictionary = new ArrayList<>();
     public static ArrayList<String> beheadmentDictionary = new ArrayList<>();
+    
     int count = 0;
 
     /**
@@ -32,7 +33,7 @@ public class Jarvis {
     }
 
     public void beheadmentGame() {
-        
+
         //adds all the words of the dictionary substring(1)
         for (int i = 0; i < dictionary.size(); i++) {
 
@@ -44,54 +45,24 @@ public class Jarvis {
             System.out.println(beheadmentDictionary.get(i));
 
         }
-        
-        
-        for(int i = 0; i < beheadmentDictionary.size(); i++){
-                    
-                    for(int n = 0; n < dictionary.size(); n++){
-                        if(dictionary.get(n).equals(beheadmentDictionary.get(i))){
-                        
-                        count++;
-                    }
-                    }
+
+
+        for (int i = 0; i < beheadmentDictionary.size(); i++) {
+
+            for (int n = 0; n < dictionary.size(); n++) {
+                if (dictionary.get(n).equals(beheadmentDictionary.get(i))) {
+
+                    count++;
                 }
-        
+            }
+        }
+
         System.out.println("Jarvis's score is: " + count);
-        
-        
-        
-        
-        
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    public void countDownGame(){
+        
+    }
+
+
 }
