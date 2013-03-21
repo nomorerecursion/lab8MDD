@@ -37,6 +37,7 @@ public class Lab8MDD {
     }
 
     /**
+	  * 
      * Runs Ghosts
      */
     public static void playGhosts() {
@@ -49,6 +50,12 @@ public class Lab8MDD {
         countdownPlayer1.processDictionary("dictionary.txt");
         countdownPlayer1.player1();
     }
+	 
+	 public static void playCenturion() throws FileNotFoundException{
+		 Game0 game0player1 = new Game0();
+		 game0player1.processDictionary("dictionary.txt");
+		 game0player1.player1();
+	 }
 
     /**
      * Create and show the user a menu in which he/she can select a game
@@ -71,10 +78,10 @@ public class Lab8MDD {
 
         switch (selection) {
 //            Daniel, this is where your method to initialize your game will go.
-//            case 0:
-//                playCenturion();
-//                showMenu();
-//                break;
+           case 0:
+                playCenturion();
+                showMenu();
+                break;
             case 1:
                 playCountdown();
                 System.out.println();
