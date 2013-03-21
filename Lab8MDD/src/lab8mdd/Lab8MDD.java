@@ -42,7 +42,8 @@ public class Lab8MDD {
     public static void playGhosts() {
         Ghosts game = new Ghosts();
         game.playGhosts();
-    }
+	 
+	 }
 
     public static void playCountdown() throws FileNotFoundException {
         Countdown countdownPlayer1 = new Countdown();
