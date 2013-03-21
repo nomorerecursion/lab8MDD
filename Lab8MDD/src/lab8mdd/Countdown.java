@@ -27,6 +27,7 @@ public class Countdown
 	char[] randomChar = new char[9];
 	ArrayList<String> possibleWords = new ArrayList<String>();
 	ArrayList<String> finalWords = new ArrayList<String>();
+        private long start, stop;
 	
 
 
@@ -61,8 +62,22 @@ public class Countdown
 			System.out.print(randomChar[i] + "-");
 		}
 		System.out.println();
+                start = System.nanoTime();
 		System.out.println("You have 30 seconds to enter the longest possible word you can think of comprised of those letters. ");
 		player1 = input.nextLine();
+                stop = System.nanoTime();
+                
+                if (checkTimeOfInput(start, stop) >= 30000000000L) {
+                    System.out.print("Letters: ");
+                    for (int i = 0; i < randomChar.length; i++)
+		{
+			System.out.print(randomChar[i] + "-");
+		}
+                    System.out.println();
+                    System.out.println(player1 + "\n" + "Time exceeded!" + "\n" + "Player 2 wins!");
+                    System.exit(0);
+                    
+                }
 		
 		for(int i = 0; i < player1.length(); i++){
 			if(!randomCharLine.contains(""+player1.charAt(i))){
@@ -166,7 +181,14 @@ public class Countdown
 
 
 	}
-
+        
+            /*
+     * makes a timer
+     */
+    private long checkTimeOfInput(long begin, long finish) {
+        return finish - begin;
+    }
+        
 	/*
 	 * runs the method combinations
 	 */

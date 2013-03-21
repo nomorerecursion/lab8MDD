@@ -10,10 +10,7 @@ public class Lab8MDD {
 
     public static void main(String[] args) throws FileNotFoundException {
         showMenu();
-//		playBeheadments();
-//		playAcrostics();
-//              playGhosts();
-//                playCountdown();
+
     }
     /*
      * runs the Behadments game
@@ -36,8 +33,7 @@ public class Lab8MDD {
         game.playAcrostrics();
     }
 
-    /**
-	  * 
+    /*
      * Runs Ghosts
      */
     public static void playGhosts() {
@@ -45,7 +41,9 @@ public class Lab8MDD {
         game.playGhosts();
 	 
 	 }
-
+    /*
+     * runs Countdown
+     */
     public static void playCountdown() throws FileNotFoundException {
         Countdown countdownPlayer1 = new Countdown();
         countdownPlayer1.processDictionary("dictionary.txt");
@@ -77,8 +75,7 @@ public class Lab8MDD {
         int selection = choice.nextInt();
         System.out.println();
 
-        switch (selection) {
-//            Daniel, this is where your method to initialize your game will go.
+        switch (selection) {            
            case 0:
                 playCenturion();
                 showMenu();

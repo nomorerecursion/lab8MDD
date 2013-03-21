@@ -14,8 +14,11 @@ public class Jarvis {
 
     public static ArrayList<String> dictionary = new ArrayList<>();
     public static ArrayList<String> beheadmentDictionary = new ArrayList<>();
+    public static ArrayList<String> beheadmentJarvis = new ArrayList<>();
     
-    int count = 0;
+    private int jarviscount = 0;
+    Beheadments game3 = new Beheadments();
+    int playercount = game3.getPlayercount();
 
     /**
      * Reads in the dictionary and creates it in a static variable
@@ -32,10 +35,14 @@ public class Jarvis {
             System.out.println("404: File Not Found");
         }
     }
-
+    /*
+     * Sets up the beheadment dictionary for Jarvis
+     * finds random number of beheament words
+     * declares a winner
+     */
     public void beheadmentGame() {
         Random randomGenerator = new Random();
-        int randomInt = randomGenerator.nextInt(5);
+        int randomInt = randomGenerator.nextInt(6) + 3;
         //adds all the words of the dictionary substring(1)
         for (int i = 0; i < dictionary.size(); i++) {
 
@@ -49,22 +56,36 @@ public class Jarvis {
         }
 
 
-        for (int i = 0; i < beheadmentDictionary.size()/randomInt; i++) {
+        for (int i = 0; i < beheadmentDictionary.size()/randomInt; i++){
 
             for (int n = 0; n < dictionary.size(); n++) {
                 if (dictionary.get(n).equals(beheadmentDictionary.get(i))) {
-
-                    count++;
+                    beheadmentJarvis.add(beheadmentDictionary.get(i));
+                    jarviscount++;
+                    System.out.print(dictionary.get(n) + ", ");
                 }
             }
         }
+        
+        
 
-        System.out.println("Jarvis's score is: " + count);
-    }
-    
-    public void countDownGame(){
+        
+        System.out.println();
+        System.out.println("Player 2 score: " + jarviscount);
+        
+        
+       
+        if(playercount > jarviscount){
+        System.out.println("Player 1 wins!");
+        }
+        else if(jarviscount > playercount){
+            System.out.println("Player 2 wins!");
+        }
+        
         
     }
+    
+    
 
 
 }
